@@ -1,12 +1,24 @@
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(255, 45, 200);
+function setup () {
+  createCanvas (windowWidth, windowHeight);
+  background (245,235,215);
 }
 
-function draw() {
-  circle(mouseX, mouseY, 60);
+function draw () {
+  nostroke();
+  if (mouseX > width/2) {
+    if (mouseY > height/2) {
+      fill (220,30,30);
+      } else {
+        fill(250,200,0);
+      }
+  } else {
+    if (mouseY > height/2) {
+      fill (30,70,180);
+      } else {
+        fill(0);
+      } 
+
+    }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+circle (mouseX, mouseY, random(10,40));
